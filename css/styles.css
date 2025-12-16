@@ -19,12 +19,12 @@ main{padding:1rem;max-width:900px;margin-right:3.5rem}
 section{margin-bottom:2rem}
 footer{padding:1rem;color:var(--muted);font-size:0.9rem}
 
-/* Side menu (right) */
-#side-menu{position:fixed;top:0;right:0;height:100%;transition:width .22s ease;background:transparent}
+.left-toggle{position:fixed;left:0;top:0;height:44px;width:44px;background:var(--bg);border:none;border-right:1px solid rgba(0,0,0,0.06);cursor:pointer}
+/* Side menu (left) */
+#side-menu{position:fixed;top:0;left:0;height:100%;transition:width .22s ease;background:transparent;z-index:60}
 #side-menu.collapsed{width:44px}
 #side-menu:not(.collapsed){width:var(--menu-width)}
-#menu-toggle{position:fixed;right:0;top:0;height:44px;width:44px;background:var(--bg);border:none;border-left:1px solid rgba(0,0,0,0.06);cursor:pointer}
-#menu-panel{position:fixed;top:44px;right:0;height:calc(100% - 44px);width:var(--menu-width);background:var(--bg);box-shadow:-8px 0 18px rgba(0,0,0,0.04);padding:0.8rem;overflow:auto;border-left:1px solid rgba(0,0,0,0.04)}
+#menu-panel{position:fixed;top:44px;left:0;height:calc(100% - 44px);width:var(--menu-width);background:var(--bg);box-shadow:8px 0 18px rgba(0,0,0,0.04);padding:0.8rem;overflow:auto;border-right:1px solid rgba(0,0,0,0.04)}
 #side-menu.collapsed #menu-panel{display:none}
 .menu-top{display:flex;gap:0.5rem;align-items:center;margin-bottom:0.6rem}
 #menu-search{flex:1;padding:0.4rem;border:1px solid rgba(0,0,0,0.08);border-radius:4px}
@@ -35,7 +35,13 @@ nav li{margin:0.2rem 0}
 nav a{color:var(--fg);text-decoration:none}
 
 /* Small screens: collapsed menu by default */
-@media (max-width:720px){#side-menu:not(.collapsed){width:calc(100% - 56px)} main{margin-right:0}}
+@media (max-width:720px){#side-menu:not(.collapsed){width:calc(100% - 56px)} main{margin-left:0;margin-right:0}}
+
+/* shift main content when menu is open on larger screens */
+@media (min-width:721px){
+  #side-menu:not(.collapsed) ~ main{margin-left:var(--menu-width);}
+  #side-menu.collapsed ~ main{margin-left:44px}
+}
 
 /* Tabs (project page) */
 .tabs{display:flex;gap:0.4rem;border-bottom:1px solid rgba(0,0,0,0.06);padding-bottom:0.4rem;margin-bottom:1rem}

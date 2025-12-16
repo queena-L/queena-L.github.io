@@ -33,26 +33,27 @@
     </section>
   </main>
 
-  <!-- Right-side collapsible menu. Add fields and project links inside the <ul id="field-list">. -->
-  <aside id="side-menu" class="collapsed" aria-hidden="true">
-    <button id="menu-toggle" aria-expanded="false" aria-controls="menu-panel">☰</button>
+  <!-- Left-side collapsible menu. Edit the lists to add fields and projects. -->
+  <aside id="side-menu" class="collapsed left" aria-hidden="true">
+    <button id="menu-toggle" class="left-toggle" aria-expanded="false" aria-controls="menu-panel">☰</button>
     <div id="menu-panel">
       <div class="menu-top">
         <input id="menu-search" placeholder="Search projects..." aria-label="search projects">
         <label class="dark-toggle"><input id="dark-toggle" type="checkbox"> Dark</label>
       </div>
       <nav>
-        <h3>Fields</h3>
+        <h3>Menu</h3>
         <ul id="field-list">
-          <!-- Each field is a page. Add new <li><a href="FIELDPAGE.html">Field Name</a></li> to add fields. -->
+          <!-- Add new fields by creating a page and adding an <li> here -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="gis.html">GIS</a></li>
-          <li><a href="#">Data Science</a></li>
-          <li><a href="#">Web</a></li>
+          <li><a href="data-science.html">Data Science</a></li>
+          <li><a href="web.html">Web</a></li>
         </ul>
 
-        <h4>Quick links</h4>
+        <h4>Projects</h4>
         <ul id="quick-links">
-          <!-- Project links can be added here or within field pages. Use absolute or relative URLs. -->
           <li><a href="projects/gis/mapping-migrant-distribution.html">Mapping Migrant Distribution in the US</a></li>
         </ul>
       </nav>

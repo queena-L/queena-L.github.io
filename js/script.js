@@ -1,6 +1,6 @@
 // Main interactive behaviors: menu toggle, dark mode, search, tabs
 document.addEventListener('DOMContentLoaded',function(){
-  // Menu toggle (collapsible right menu)
+  // Menu toggle (collapsible left or right menu)
   const side = document.getElementById('side-menu');
   const toggle = document.getElementById('menu-toggle');
   if(toggle && side){
@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded',function(){
       const collapsed = side.classList.toggle('collapsed');
       toggle.setAttribute('aria-expanded', String(!collapsed));
       side.setAttribute('aria-hidden', String(collapsed));
+      // keep checkbox state in sync for accessibility
+      try{ toggle.blur(); }catch(e){}
     });
   }
 
