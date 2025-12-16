@@ -1,0 +1,48 @@
+/* Minimalist styles using Georgia-like serif font. */
+:root{
+  --bg:#ffffff;
+  --fg:#111111;
+  --muted:#555;
+  --accent:#0a66c2;
+  --menu-width:320px;
+}
+html.dark{ --bg:#0f1113; --fg:#e6e6e6; --muted:#9aa0a6; --accent:#7aa7ff; }
+html,body{height:100%;}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family: Georgia, 'Times New Roman', serif; line-height:1.5;
+}
+.site-header{padding:2rem 1rem 0 1rem}
+.site-header h1{margin:0;font-weight:400}
+.tagline{margin:0.2rem 0 1.2rem;color:var(--muted)}
+main{padding:1rem;max-width:900px;margin-right:3.5rem}
+section{margin-bottom:2rem}
+footer{padding:1rem;color:var(--muted);font-size:0.9rem}
+
+/* Side menu (right) */
+#side-menu{position:fixed;top:0;right:0;height:100%;transition:width .22s ease;background:transparent}
+#side-menu.collapsed{width:44px}
+#side-menu:not(.collapsed){width:var(--menu-width)}
+#menu-toggle{position:fixed;right:0;top:0;height:44px;width:44px;background:var(--bg);border:none;border-left:1px solid rgba(0,0,0,0.06);cursor:pointer}
+#menu-panel{position:fixed;top:44px;right:0;height:calc(100% - 44px);width:var(--menu-width);background:var(--bg);box-shadow:-8px 0 18px rgba(0,0,0,0.04);padding:0.8rem;overflow:auto;border-left:1px solid rgba(0,0,0,0.04)}
+#side-menu.collapsed #menu-panel{display:none}
+.menu-top{display:flex;gap:0.5rem;align-items:center;margin-bottom:0.6rem}
+#menu-search{flex:1;padding:0.4rem;border:1px solid rgba(0,0,0,0.08);border-radius:4px}
+.dark-toggle{font-size:0.85rem;color:var(--muted)}
+nav h3,nav h4{margin:0.4rem 0}
+nav ul{list-style:none;padding:0;margin:0 0 1rem 0}
+nav li{margin:0.2rem 0}
+nav a{color:var(--fg);text-decoration:none}
+
+/* Small screens: collapsed menu by default */
+@media (max-width:720px){#side-menu:not(.collapsed){width:calc(100% - 56px)} main{margin-right:0}}
+
+/* Tabs (project page) */
+.tabs{display:flex;gap:0.4rem;border-bottom:1px solid rgba(0,0,0,0.06);padding-bottom:0.4rem;margin-bottom:1rem}
+.tab{padding:0.4rem 0.6rem;cursor:pointer;background:transparent;border:none}
+.tab.active{border-bottom:2px solid var(--accent);font-weight:600}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* small niceties */
+a{color:var(--accent)}

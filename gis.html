@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GIS — Your Name</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="index.html">Your Name</a></h1>
+    <p class="tagline">GIS • mapping and spatial analysis</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>GIS Projects</h2>
+      <p>This page lists GIS projects. Add a project by creating a new file under `projects/gis/` and adding a link below.</p>
+
+      <!-- Searchable project list: matches the right-hand menu search. Add <li><a href="...">Title</a></li> entries for new projects. -->
+      <ul id="gis-projects">
+        <li><a href="projects/gis/mapping-migrant-distribution.html">Mapping Migrant Distribution in the US</a></li>
+        <!-- Add new project links here -->
+      </ul>
+    </section>
+  </main>
+
+  <!-- Reuse the same right-hand menu markup as index.html (for convenience the static menu is inlined here) -->
+  <aside id="side-menu" class="collapsed" aria-hidden="true">
+    <button id="menu-toggle" aria-expanded="false" aria-controls="menu-panel">☰</button>
+    <div id="menu-panel">
+      <div class="menu-top">
+        <input id="menu-search" placeholder="Search projects..." aria-label="search projects">
+        <label class="dark-toggle"><input id="dark-toggle" type="checkbox"> Dark</label>
+      </div>
+      <nav>
+        <h3>Fields</h3>
+        <ul id="field-list">
+          <li><a href="gis.html">GIS</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+        <h4>GIS Projects</h4>
+        <ul id="quick-links">
+          <li><a href="projects/gis/mapping-migrant-distribution.html">Mapping Migrant Distribution in the US</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <footer><p>Edit `gis.html` to add more fields or projects.</p></footer>
+</body>
+</html>

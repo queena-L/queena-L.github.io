@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Minimal Portfolio — Your Name</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <!-- Header: site title and short bio. Edit the text below to update your name/description. -->
+  <header class="site-header">
+    <h1 id="site-title">Your Name</h1>
+    <p class="tagline">Minimal portfolio — projects, writing, and maps</p>
+  </header>
+
+  <!-- Main content area. Add sections or pages and link them from the right menu. -->
+  <main id="main">
+    <section id="about">
+      <h2>About</h2>
+      <!-- Replace this paragraph with your bio. -->
+      <p>Short bio goes here. Keep it concise. Add links or more sections as needed.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Fields</h2>
+      <p>Use the menu on the right to navigate between fields (e.g. GIS). Each field page contains project links and searchable menus.</p>
+      <ul>
+        <li><a href="gis.html">GIS</a> — mapping and spatial analysis</li>
+        <li><a href="#">Data Science</a> — placeholder page (add page and link here)</li>
+        <li><a href="#">Web / Dev</a> — placeholder</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Right-side collapsible menu. Add fields and project links inside the <ul id="field-list">. -->
+  <aside id="side-menu" class="collapsed" aria-hidden="true">
+    <button id="menu-toggle" aria-expanded="false" aria-controls="menu-panel">☰</button>
+    <div id="menu-panel">
+      <div class="menu-top">
+        <input id="menu-search" placeholder="Search projects..." aria-label="search projects">
+        <label class="dark-toggle"><input id="dark-toggle" type="checkbox"> Dark</label>
+      </div>
+      <nav>
+        <h3>Fields</h3>
+        <ul id="field-list">
+          <!-- Each field is a page. Add new <li><a href="FIELDPAGE.html">Field Name</a></li> to add fields. -->
+          <li><a href="gis.html">GIS</a></li>
+          <li><a href="#">Data Science</a></li>
+          <li><a href="#">Web</a></li>
+        </ul>
+
+        <h4>Quick links</h4>
+        <ul id="quick-links">
+          <!-- Project links can be added here or within field pages. Use absolute or relative URLs. -->
+          <li><a href="projects/gis/mapping-migrant-distribution.html">Mapping Migrant Distribution in the US</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <footer>
+    <p>Minimal portfolio — edit `index.html` to customize content.</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Queena Li</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <!-- ===== Dark Mode Toggle ===== -->
+  <!-- Toggle is handled in script.js -->
+  <button id="darkModeToggle" class="dark-toggle">☾</button>
+
+  <!-- ===== Collapsible Right Sidebar Menu ===== -->
+  <!-- Add new fields here (ex. Data Science, Design, Writing) -->
+  <nav id="sidebar">
+    <button id="menuToggle">☰</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+
+      <!-- Field pages -->
+      <li><a href="gis.html">GIS</a></li>
+      <!-- Example:
+      <li><a href="datascience.html">Data Science</a></li>
+      -->
+    </ul>
+  </nav>
+
+  <!-- ===== Main Content ===== -->
+  <main>
+    <h1>Queena</h1>
+    <p class="subtitle">Short professional description.</p>
+
+    <!-- ===== About Section ===== -->
+    <!-- Edit this text to change homepage content -->
+    <section>
+      <h2>About</h2>
+      <p>
+        I work across multiple fields including GIS.  
+        This site showcases selected projects and research.
+      </p>
+    </section>
+
+    <!-- ===== Instructions Section (optional, remove later) ===== -->
+    <section>
+      <h2>How to Use This Site</h2>
+      <p>
+        Use the menu on the right to navigate by field.
+        Each field page contains searchable project links.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
+
