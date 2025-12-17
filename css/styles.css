@@ -45,8 +45,8 @@ nav a{color:var(--fg);text-decoration:none}
 
 /* Tabs (project page) */
 .tabs{display:flex;gap:0.4rem;border-bottom:1px solid rgba(0,0,0,0.06);padding-bottom:0.4rem;margin-bottom:1rem}
-.tab{padding:0.4rem 0.6rem;cursor:pointer;background:transparent;border:none}
-.tab.active{border-bottom:2px solid var(--accent);font-weight:600}
+.tab{padding:0.4rem 0.6rem;cursor:pointer;background:transparent;border:none;color:var(--fg)}
+.tab.active{border-bottom:2px solid var(--accent);font-weight:600;color:var(--accent)}
 .tab-content{display:none}
 .tab-content.active{display:block}
 
