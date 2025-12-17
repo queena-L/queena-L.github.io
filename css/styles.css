@@ -64,3 +64,22 @@ a{color:var(--accent)}
 .menu-top input[type="search"]{width:100%}
 .menu-top .dark-toggle input{transform:translateY(1px)}
 
+/* Header link styles: make <h1><a> look like a heading while remaining a link */
+.site-header h1{margin:0}
+.site-header h1 a{
+  color:var(--fg);
+  text-decoration:none;
+  font-weight:600;
+  font-size:1.5rem;
+  line-height:1.05;
+}
+.site-header h1 a:hover,
+.site-header h1 a:focus{
+  color:var(--accent);
+  text-decoration:underline;
+}
+
+/* Ensure header link is readable in dark theme as well */
+html.dark .site-header h1 a{color:var(--fg)}
+
+
