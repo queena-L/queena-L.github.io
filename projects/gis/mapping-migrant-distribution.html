@@ -55,5 +55,30 @@
          - Tabs are controlled by `js/script.js`. Use `data-target` matching the id of the tab content.
     -->
   </main>
+
+  <!-- Add left menu + dark mode toggle so project pages have same navigation -->
+  <aside id="side-menu" class="collapsed" aria-hidden="true">
+    <button id="menu-toggle" aria-expanded="false" aria-controls="menu-panel">☰</button>
+    <div id="menu-panel">
+      <div class="menu-top">
+        <input id="menu-search" placeholder="Search projects..." aria-label="search projects">
+        <label class="dark-toggle"><input id="dark-toggle" type="checkbox"> Dark</label>
+      </div>
+      <nav>
+        <h3>Menu</h3>
+        <ul id="field-list">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/gis.html">GIS</a></li>
+          <li><a href="/data-science.html">Data Science</a></li>
+          <li><a href="/web.html">Web</a></li>
+        </ul>
+        <h4>Projects</h4>
+        <ul id="quick-links">
+          <li><a href="/projects/gis/mapping-migrant-distribution.html">Mapping Migrant Distribution</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
 </body>
 </html>
