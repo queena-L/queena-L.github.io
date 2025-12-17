@@ -52,3 +52,12 @@ nav a{color:var(--fg);text-decoration:none}
 
 /* small niceties */
 a{color:var(--accent)}
+
+/* Minimal menu-specific helpers (appended, do not remove existing strings) */
+/* These ensure the menu layout and dark toggle look correct without altering other rules. */
+#side-menu{background:transparent}
+#menu-panel{background:var(--bg)}
+#menu-panel a{color:var(--fg)}
+.menu-top input[type="search"]{width:100%}
+.menu-top .dark-toggle input{transform:translateY(1px)}
+
