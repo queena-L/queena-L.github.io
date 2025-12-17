@@ -50,6 +50,9 @@ nav a{color:var(--fg);text-decoration:none}
 .tab-content{display:none}
 .tab-content.active{display:block}
 
+/* Ensure tab text is readable in dark mode */
+html.dark .tab{color:var(--fg)}
+
 /* small niceties */
 a{color:var(--accent)}
 
